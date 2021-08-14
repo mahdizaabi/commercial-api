@@ -1,7 +1,7 @@
-package guru.springfamework.controller.v1;
+package com.commercialapi.controller.v1;
 
-import guru.springfamework.api.v1.model.CategoryDTO;
-import guru.springfamework.service.CategoryService;
+import com.commercialapi.api.v1.model.CategoryDTO;
+import com.commercialapi.service.CategoryService;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.*;
@@ -72,7 +72,7 @@ public class CategoryControllerTest {
     @Test
     public void NOT_FOUND_ERROR_HADNLING() throws Exception {
         CategoryDTO category1 = new CategoryDTO();
-        mockMvc.perform(get("/api/v1/categories/lkkkllkkl")
+        mockMvc.perform(get("/api/v1/categordies/lkkkllkkl")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().is4xxClientError());
     }
